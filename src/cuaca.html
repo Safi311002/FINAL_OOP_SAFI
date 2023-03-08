@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/cuaca.css">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <center>
+        <h1>Weather in French</h1>
+        <label for="city-dropdown">Select a city:</label>
+        <select id="city-dropdown"></select>
+        <div id="weather-info"></div>  
+    </center>
+    <button>
+      <a href="index.html">Back</a>
+    </button>
+
+    <script>
+      const apiKey = '9fd7a449d055dba26a982a3220f32aa2';
+      const cityDropdown = document.getElementById('city-dropdown');
+      const weatherInfo = document.getElementById('weather-info');
+
+      // Define an array of French cities to display in the dropdown
+      const cities = [
+  { name: 'Paris', id: 2968815 },
+  { name: 'Marseille', id: 2995469 },
+  { name: 'Lyon', id: 2996944 },
+  { name: 'Toulouse', id: 2972315 },
+  { name: 'Nice', id: 2990440 },
+  { name: 'Strasbourg', id: 2973783 },
+  { name: 'Nantes', id: 2990969 },
+  { name: 'Montpellier', id: 2992166 },
+  { name: 'Bordeaux', id: 3031582 },
+  { name: 'Lille', id: 2998324 },
+];
+   
+
+      // Create an option element for each city and append it to the dropdown
+      cities.forEach(city => {
+        const option = document.createElement('option');
+        option.text = city.name;
+        option.value = city.id;
+        cityDropdown.add(option);
+      });
+
+      // Add an event listener to the dropdown to update the weather info when a new city is selected
+      cityDropdown.addEventListener('change', () => {
+        const cityId = cityDropdown.value;
+        const url = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=${apiKey}&units=metric&lang=fr`;
+
+        fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    const sunriseTime = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+    const sunsetTime = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+    const temperature = Math.round(data.main.temp);
+    const cloudIconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
+    weatherInfo.innerHTML = `
+      <h2>${data.name}</h2>
+      <div class="weather-data">
+        <div class="weather-icon">
+          <img src="${cloudIconUrl}" alt="${temperature}">
+        </div>
+        <div class="weather-details">
+          <p><strong>Temperature:</strong> ${temperature}°C</p>
+          <p><strong>Sunrise Time:</strong> ${sunriseTime}</p>
+          <p><strong>Sunset Time:</strong> ${sunsetTime}</p>
+        </div>
+      </div>
+    `;
+  })
+  .catch(error => console.log(error));
+
+      });
+    </script>
+  </body>
+</html>

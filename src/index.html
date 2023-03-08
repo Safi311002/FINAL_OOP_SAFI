@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Responsive Website Travel</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Bonjour!</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="meal.html" class="nav__link active-link">Cuisine</a>
+                        </li>
+                    </ul>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="cuaca.html" class="nav__link active-link">Weather</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="img/background1.jpg" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">Discover your place</span>
+                        <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> France</b></h1>
+
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== Data ====================-->
+            <div class="data" id="data">
+                <h2>Travel Information for France</h2>
+                <ul>
+                  <li><i class="fas fa-language"></i><strong>Language:</strong> French is the official language of France, but English is widely spoken in major tourist areas.</li>
+                  <li><i class="fas fa-euro-sign"></i><strong>Currency:</strong> The currency in France is the Euro (EUR). It is recommended to exchange money at banks or exchange offices, rather than at airports or hotels.</li>
+                  <li><i class="fas fa-sun"></i><strong>Climate:</strong> France has a temperate climate with mild winters and warm summers. The best time to visit depends on the region, but generally May to September is considered the best time to visit.</li>
+                  <li><i class="fas fa-bus"></i><i class="fas fa-subway"></i><i class="fas fa-train"></i><strong>Transportation:</strong> France has an extensive and efficient public transportation system, including buses, trains, and metros. The TGV (high-speed train) is a popular and convenient way to travel between major cities.</li>
+                  <li><i class="fas fa-map-marked-alt"></i><strong>Attractions:</strong> France is home to numerous attractions, including the iconic Eiffel Tower, world-famous Louvre Museum, historic Palace of Versailles, picturesque Mont Saint-Michel, and stunning French Riviera. It is recommended to research and plan ahead to make the most of your trip.</li>
+                </ul>
+              </div>
+
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Video Tour</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Find out more with our video of the most beautiful and 
+                        pleasant places for you and your family.
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="video/video1.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place">
+                <h2 class="section__title">Top 5 Places in France!</h2>
+
+                <div class="place__container container grid">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <a href="https://www.solosophie.com/visit-bordeaux/">
+                        <div class="place__card">
+                            <img src="img/bordeaux.jpg" alt="" class="place__img">
+                            
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">4,8</span>
+                                </span>
+                    
+                                <div class="place__data">
+                                    <h3 class="place__title">Bordeaux</h3>
+                                    <span class="place__subtitle">France</span>
+                                    <span class="place__price">$2499</span>
+                                </div>
+                            </div>
+                    
+                            <button class="button button--flex place__button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </a>
+                    
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <a href="https://www.thecrazytourist.com/15-best-things-lille-france/">
+                        <div class="place__card">
+                            <img src="img/lille.jpg" alt="" class="place__img">
+                            
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">5,0</span>
+                                </span>
+                    
+                                <div class="place__data">
+                                    <h3 class="place__title">Lille</h3>
+                                    <span class="place__subtitle">France</span>
+                                    <span class="place__price">$1599</span>
+                                </div>
+                            </div>
+                    
+                            <button class="button button--flex place__button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </a>
+                    
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <a href="https://www.thecrazytourist.com/15-best-things-montpellier-france/">
+                        <div class="place__card">
+                            <img src="img/montpellier.jpg" alt="" class="place__img">
+                        
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">4,9</span>
+                                </span>
+
+                                <div class="place__data">
+                                    <h3 class="place__title">Montpellier</h3>
+                                    <span class="place__subtitle">France</span>
+                                    <span class="place__price">$3499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button--flex place__button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <a href="https://bucketlistbri.com/things-to-do-lyon-france/">
+                        <div class="place__card">
+                            <img src="img/lyon.jpg" alt="" class="place__img">
+                        
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">4,8</span>
+                                    </span>
+
+                                <div class="place__data">
+                                    <h3 class="place__title">Lyon</h3>
+                                    <span class="place__subtitle">France</span>
+                                    <span class="place__price">$2499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button--flex place__button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <a href="https://www.thecrazytourist.com/15-best-things-marseille-france/">
+                        <div class="place__card">
+                            <img src="img/marseille.jpg" alt="" class="place__img">
+                        
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">4,8</span>
+                                </span>
+
+                                <div class="place__data">
+                                    <h3 class="place__title">Marseille</h3>
+                                    <span class="place__subtitle">France</span>
+                                    <span class="place__price">$1999</span>
+                                </div>
+                            </div>
+
+                            <button class="button button--flex place__button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">About</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Features</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">New & Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Company</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Team</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Plan y Pricing</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Become a member</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Support Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2021 Bedimcode. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="js/main.js"></script>
+    </body>
+</html>

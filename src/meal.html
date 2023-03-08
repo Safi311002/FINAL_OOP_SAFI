@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipes</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/makanan.css">
+  </head>
+  <body>
+    <h1>Good Food, Good stomach!</h1>
+
+    <div id="beef-bourguignon"></div>
+    <div id="boulangere-potatoes"></div>
+    <div id="chicken-marengo"></div>
+    <div id="chinon-apple-tarts"></div>
+    <div id="chocolate-gateau"></div>
+    <div id="duck-confit"></div>
+
+    <button>
+      <a href="index.html">Back</a>
+    </button>
+
+    <script>
+      const beefBourguignon = document.getElementById("beef-bourguignon");
+      const boulangerePotatoes = document.getElementById("boulangere-potatoes");
+      const chickenMarengo = document.getElementById("chicken-marengo");
+      const chinonAppleTarts = document.getElementById("chinon-apple-tarts");
+      const chocolateGateau = document.getElementById("chocolate-gateau");
+      const duckConfit = document.getElementById("duck-confit");
+
+      fetch(
+        "https://www.themealdb.com/api/json/v1/1/search.php?s=beef_bourguignon"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const meal = data.meals[0];
+          beefBourguignon.innerHTML = `
+            <h2>${meal.strMeal}</h2>
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+            <h3>Ingredients:</h3>
+            <ul>
+              <li>${meal.strIngredient1} - ${meal.strMeasure1}</li>
+              <li>${meal.strIngredient2} - ${meal.strMeasure2}</li>
+              <li>${meal.strIngredient3} - ${meal.strMeasure3}</li>
+              <li>${meal.strIngredient4} - ${meal.strMeasure4}</li>
+              <li>${meal.strIngredient5} - ${meal.strMeasure5}</li>
+              <li>${meal.strIngredient6} - ${meal.strMeasure6}</li>
+              <li>${meal.strIngredient7} - ${meal.strMeasure7}</li>
+              <li>${meal.strIngredient8} - ${meal.strMeasure8}</li>
+              <li>${meal.strIngredient9} - ${meal.strMeasure9}</li>
+              <li>${meal.strIngredient10} - ${meal.strMeasure10}</li>
+            </ul>
+          `;
+        });
+
+      fetch(
+        "https://www.themealdb.com/api/json/v1/1/search.php?s=boulangere_potatoes"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const meal = data.meals[0];
+          boulangerePotatoes.innerHTML = `
+            <h2>${meal.strMeal}</h2>
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+            <h3>Ingredients:</h3>
+            <ul>
+              <li>${meal.strIngredient1} - ${meal.strMeasure1}</li>
+              <li>${meal.strIngredient2} - ${meal.strMeasure2}</li>
+              <li>${meal.strIngredient3} - ${meal.strMeasure3}</li>
+              <li>${meal.strIngredient4} - ${meal.strMeasure4}</li>
+              <li>${meal.strIngredient5} - ${meal.strMeasure5}</li>
+        </ul>
+      `;
+    });
+
+  fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?s=chicken_marengo"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const meal = data.meals[0];
+      chickenMarengo.innerHTML = `
+        <h2>${meal.strMeal}</h2>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <h3>Ingredients:</h3>
+        <ul>
+          <li>${meal.strIngredient1} - ${meal.strMeasure1}</li>
+          <li>${meal.strIngredient2} - ${meal.strMeasure2}</li>
+          <li>${meal.strIngredient3} - ${meal.strMeasure3}</li>
+          <li>${meal.strIngredient4} - ${meal.strMeasure4}</li>
+          <li>${meal.strIngredient5} - ${meal.strMeasure5}</li>
+          <li>${meal.strIngredient6} - ${meal.strMeasure6}</li>
+          <li>${meal.strIngredient7} - ${meal.strMeasure7}</li>
+        </ul>
+      `;
+    });
+
+  fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?s=chinon_apple_tarts"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const meal = data.meals[0];
+      chinonAppleTarts.innerHTML = `
+        <h2>${meal.strMeal}</h2>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <h3>Ingredients:</h3>
+        <ul>
+          <li>${meal.strIngredient1} - ${meal.strMeasure1}</li>
+          <li>${meal.strIngredient2} - ${meal.strMeasure2}</li>
+          <li>${meal.strIngredient3} - ${meal.strMeasure3}</li>
+          <li>${meal.strIngredient4} - ${meal.strMeasure4}</li>
+          <li>${meal.strIngredient5} - ${meal.strMeasure5}</li>
+          <li>${meal.strIngredient6} - ${meal.strMeasure6}</li>
+          <li>${meal.strIngredient7} - ${meal.strMeasure7}</li>
+        </ul>
+      `;
+    });
+
+  fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?s=chocolate_gateau"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const meal = data.meals[0];
+      chocolateGateau.innerHTML = `
+        <h2>${meal.strMeal}</h2>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <h3>Ingredients:</h3>
+        <ul>
+          <li>${meal.strIngredient1} - ${meal.strMeasure1}</li>
+          <li>${meal.strIngredient2} - ${meal.strMeasure2}</li>
+          <li>${meal.strIngredient3} - ${meal.strMeasure3}</li>
+          <li>${meal.strIngredient4} - ${meal.strMeasure4}</li>
+          <li>${meal.strIngredient5} - ${meal.strMeasure5}</li>
+          <li>${meal.strIngredient6} - ${meal.strMeasure6}</li>
+        </ul>
+      `;
+    });
+
+  fetch(
+    "https://www.themealdb.com/api/json/v1/1/search.php?s=duck_confit"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const meal = data.meals[0];
+      duckConfit.innerHTML = `
+        <h2>${meal.strMeal}</h2>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <h3>Ingredients:</h3>
+        <ul>
+          <li>${meal.strIngredient1} - ${meal.strMeasure1}</li>
+          <li>${meal.strIngredient2} - ${meal.strMeasure2}</li>
+          <li>${meal.strIngredient3} - ${meal.strMeasure3}</li>
+          <li>${meal.strIngredient4} - ${meal.strMeasure4}</li>
+          <li>${meal.strIngredient5} - ${meal.strMeasure5}</li>
+          <li>${meal.strIngredient6} - ${meal.strMeasure6}</li>
+        </ul>
+      `;
+    });
+</script>
+</body>
+</html>

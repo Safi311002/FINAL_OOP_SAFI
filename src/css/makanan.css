@@ -1,0 +1,89 @@
+/* Set font family to Open Sans and add some Google Fonts magic */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Style the header with a gradient background and add some animations */
+h1 {
+text-align: center;
+font-size: 3rem;
+margin: 2rem 0;
+background: linear-gradient(135deg, #ff7b25, #ff5f6d);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: animateHeader 1s ease-in-out forwards;
+}
+
+@keyframes animateHeader {
+from {
+opacity: 0;
+transform: translateY(-50%);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Style each recipe card with a shadow and a border */
+div {
+border: 2px solid #c3cfd9;
+border-radius: 10px;
+padding: 2rem;
+margin: 2rem;
+box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the recipe card titles with a gradient and a hover effect */
+h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+background: linear-gradient(135deg, #ff5f6d, #ff7b25);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+transition: all 0.3s ease-in-out;
+}
+
+h2:hover {
+transform: scale(1.05);
+}
+
+/* Style the recipe card images with a shadow and a hover effect */
+img {
+max-width: 100%;
+height: auto;
+margin-bottom: 1rem;
+box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+transform: scale(1.1);
+}
+
+/* Style the recipe card ingredients list with a bold font */
+h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+font-weight: bold;
+}
+
+/* Style the recipe card ingredients list with a circle bullet and some padding */
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+li {
+margin-bottom: 0.5rem;
+padding-left: 1rem;
+text-indent: -1rem;
+}
+
+/* Add some spacing between paragraphs */
+p {
+margin-bottom: 1rem;
+}
